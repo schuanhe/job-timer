@@ -31,3 +31,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - name: Create docs directory
+        run: mkdir -p docs
+
+      - name: Update Jekyll configuration
+        run: echo "source: docs" >> _config.yml
