@@ -45,7 +45,7 @@ const saveWorkInfo = async () => {
     localStorage.setItem('workInfo', JSON.stringify(workInfo.value));
     alert('保存成功！');
     // 跳转到计时页面
-    window.location.href = '/timer';
+    window.location.href = '/#/timer';
   } catch (error) {
     console.error('保存工作信息失败:', error);
     alert('保存失败，请重试！');
