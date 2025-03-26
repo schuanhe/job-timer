@@ -47,8 +47,8 @@ npm run build
 
 ## 项目截图
 
-![工作配置截图](![工作配置截图](blob/main/src/assets/config.png)
-![工作倒计时截图](![工作倒计时截图](blob/main/src/assets/timer.png)
+![工作配置截图](![工作配置截图](src/assets/config.png)
+![工作倒计时截图](![工作倒计时截图](src/assets/timer.png)
 
 
 ## 项目结构
