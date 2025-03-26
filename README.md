@@ -23,7 +23,7 @@
 1. 克隆项目到本地
 
 ```bash
-git clone [项目地址]
+git clone https://github.com/schuanhe/job-timer.git
 cd 每秒的钱
 ```
 
@@ -44,6 +44,12 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 项目截图
+
+![工作配置截图](![工作配置截图](URL_ADDRESS.com/schuanhe/job-timer/blob/main/src/assets/config.png)
+![工作倒计时截图](![工作倒计时截图](URL_ADDRESS.com/schuanhe/job-timer/blob/main/src/assets/timer.png)
+
 
 ## 项目结构
 
