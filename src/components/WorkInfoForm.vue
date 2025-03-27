@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import workInfoData from '../data/workInfo.json';
 
+const router = useRouter();
 interface WorkInfo {
   workHours: {
     start: string;
@@ -44,8 +46,8 @@ const saveWorkInfo = async () => {
     // 但在这个简化版本中，我们只是更新前端状态
     localStorage.setItem('workInfo', JSON.stringify(workInfo.value));
     alert('保存成功！');
-    // 跳转到计时页面
-    window.location.href = '/#/timer';
+    // 使用Vue Router进行路由跳转
+    router.push('/timer');
   } catch (error) {
     console.error('保存工作信息失败:', error);
     alert('保存失败，请重试！');
