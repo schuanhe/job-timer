@@ -124,6 +124,7 @@ const isDaySelected = (day: number) => {
 <style scoped>
 .work-info-form {
   max-width: 500px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   background-color: #1a1a1a;
@@ -135,6 +136,7 @@ h1 {
   margin-bottom: 2rem;
   color: #fff;
   text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .form-group {
@@ -176,18 +178,20 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .weekday-selector button {
   flex: 1;
   min-width: 60px;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
   background-color: #2c2c2c;
   border: 1px solid #444;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 0.9rem;
 }
 
 .weekday-selector button.selected {
@@ -210,9 +214,64 @@ input {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 100%;
+  max-width: 300px;
 }
 
 .save-button:hover {
   background-color: #535bf2;
+}
+
+@media (max-width: 768px) {
+  .work-info-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  label {
+    font-size: 0.95rem;
+  }
+  
+  input {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+  
+  .time-inputs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .time-inputs span {
+    display: none;
+  }
+  
+  .weekday-selector button {
+    min-width: 45px;
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-info-form {
+    padding: 1rem 0.75rem;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .weekday-selector {
+    gap: 0.3rem;
+  }
+  
+  .weekday-selector button {
+    min-width: 40px;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.8rem;
+  }
 }
 </style>

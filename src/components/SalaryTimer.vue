@@ -428,6 +428,7 @@ const weekendCountdown = computed(() => {
 <style scoped>
 .salary-timer {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   background-color: #1a1a1a;
@@ -440,11 +441,14 @@ const weekendCountdown = computed(() => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 h1 {
   margin: 0;
   color: #fff;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .settings-button {
@@ -486,9 +490,18 @@ h2 {
 }
 
 .countdown {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 8vw, 3rem);
   font-weight: bold;
   color: #646cff;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  min-width: 280px;
+  max-width: 100%;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .countdown.inactive {
@@ -513,11 +526,11 @@ h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 3vw, 1rem);
 }
 
 .amount {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: bold;
   color: #4dff4d;
 }
@@ -530,14 +543,51 @@ h3 {
 }
 
 .per-ms-amount {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: bold;
   color: #ff9d4d;
 }
 
 @media (max-width: 768px) {
+  .salary-timer {
+    padding: 1.5rem 1rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
   .earnings-container {
     grid-template-columns: 1fr;
+  }
+  
+  .earnings-box {
+    padding: 1rem;
+  }
+  
+  .settings-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .salary-timer {
+    padding: 1rem 0.75rem;
+  }
+  
+  .countdown-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .earnings-box {
+    padding: 0.75rem;
   }
 }
 </style>
