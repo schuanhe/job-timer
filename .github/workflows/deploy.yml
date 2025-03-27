@@ -30,3 +30,4 @@ jobs:
           folder: dist # Vite 构建输出目录
           branch: gh-pages # 部署到的分支
           clean: true # 清理旧文件
+          token: ${{ secrets.GITHUB_TOKEN }} # 使用GitHub提供的token进行身份验证
